@@ -1,0 +1,22 @@
+print("hello world")
+
+def DoesMattSuck(SaltCounter):
+
+
+    if SaltCounter == "Sucks":
+
+        print("Hahahahahah")
+
+    elif SaltCounter == "sucks":
+
+        print("Hahahahahah")
+
+    else:
+
+        print("Shit")
+
+matt = input("What does Matt do?")
+#matt = input()
+DoesMattSuck(matt)
+DoesMattSuck(matt)
+

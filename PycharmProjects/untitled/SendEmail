@@ -1,0 +1,27 @@
+#http://naelshiab.com/tutorial-send-email-python/
+
+import smtplib
+
+emailUsername = "gusgalarnyk@gmail.com"
+emailPassword = "Galarnyk1026935"
+emailRecipient = "steinr1@my.erau.edu"
+emailSubject = "TEST Subject"
+Message = "Your Message."
+
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.ehlo()
+server.starttls()
+server.ehlo()
+server.login(emailUsername, emailPassword)
+
+msg = "\r\n".join([
+    "From: " + emailUsername,
+    "To: " + emailRecipient,
+    "Subject: " + emailSubject,
+    "",
+    Message
+])
+
+server.sendmail(emailUsername, emailRecipient, msg)
+server.close()
+#input()
