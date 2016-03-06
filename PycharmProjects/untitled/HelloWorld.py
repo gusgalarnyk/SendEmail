@@ -16,7 +16,7 @@ def DoesMattSuck(SaltCounter):
         print("Shit")
 
 matt = input("What does Matt do?")
-#matt = input()
+
 DoesMattSuck(matt)
 DoesMattSuck(matt)
 

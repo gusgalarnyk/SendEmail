@@ -1,5 +1,9 @@
 import time
+import HelloWorld
 
-while True:
+HelloWorld.DoesMattSuck("sucks")
+
+'''while True:
     print("check")
     time.sleep(2)
+'''
