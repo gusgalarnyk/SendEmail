@@ -2,9 +2,9 @@
 
 import smtplib
 
-emailUsername = "gusgalarnyk@gmail.com"
-emailPassword = "Galarnyk1026935"
-emailRecipient = "steinr1@my.erau.edu"
+emailUsername = "YourEmail"
+emailPassword = "YourPassword"
+emailRecipient = "TargetEmail"
 emailSubject = "TEST Subject"
 Message = "Your Message."
 
