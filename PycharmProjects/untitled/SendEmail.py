@@ -2,26 +2,28 @@
 
 import smtplib
 
-emailUsername = "YourEmail"
-emailPassword = "YourPassword"
-emailRecipient = "TargetEmail"
-emailSubject = "TEST Subject"
-Message = "Your Message."
+def SendIt(user, key, target, sub, msg):
 
-server = smtplib.SMTP('smtp.gmail.com', 587)
-server.ehlo()
-server.starttls()
-server.ehlo()
-server.login(emailUsername, emailPassword)
+    emailUsername = user
+    emailPassword = key
+    emailRecipient = target
+    emailSubject = sub
+    Message = msg
 
-msg = "\r\n".join([
-    "From: " + emailUsername,
-    "To: " + emailRecipient,
-    "Subject: " + emailSubject,
-    "",
-    Message
-])
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
+    server.login(emailUsername, emailPassword)
 
-server.sendmail(emailUsername, emailRecipient, msg)
-server.close()
-#input()
+    msg = "\r\n".join([
+        "From: " + emailUsername,
+        "To: " + emailRecipient,
+     "Subject: " + emailSubject,
+     "",
+     Message
+    ])
+
+    server.sendmail(emailUsername, emailRecipient, msg)
+    server.close()
+    print("Email sent!")
